@@ -1,0 +1,11 @@
+﻿  StudentWorld.cpp
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(101): warning C4018: '<': signed/unsigned mismatch
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(511): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(520): warning C4018: '<': signed/unsigned mismatch
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(526): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(547): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(556): warning C4018: '<': signed/unsigned mismatch
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(562): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(613): warning C4018: '<': signed/unsigned mismatch
+c:\users\jonas\source\repos\cs30_project3_iceman\iceman\iceman\studentworld.cpp(665): warning C4018: '<': signed/unsigned mismatch
+  IceMan.vcxproj -> C:\Users\Jonas\source\repos\CS30_Project3_iceMan\IceMan\Debug\IceMan.exe

@@ -1,0 +1,144 @@
+Collaborative Write up
+
+1. Give an overview of the design of your program. How did you set up your inheritance
+relationships? Provide a diagram of your hierarchy that gives an overview of your design.
+∙Actor
+	I. MovingObjects
+	   1. IceMan
+	   2. Protestor
+		a. HardcoreProtestor
+		b. RegularProtestor
+
+	II. MapObject
+	   1. Gold
+	   2. Boulder
+	   3. OilBarrel
+	   4. Squirt
+	   5. Sonar
+	   6. WaterPool
+	III Ice
+
+    
+2. Identify the platform and environment in which you developed and tested your program.
+Include the programing environment (and which version you used) and the hardware and operating
+system on which you developed and tested your program.
+Jonas: I run my programs on Visual Studios Community 2017. IntelCore i7 with nvidia geforce gtx gpu. 
+Greg: I run my programs on Xcode currently at version 10.2.1. Processor: 2.2GHz Intel  Core i7. 
+Memory: 16 GB 2400 MHz DDR4. Graphics: Radeon Pro 555X 4 GB, Intel UHD Graphics 630 1536 MB.
+
+3. What modern C++ features were used in your code? Give any examples of smart pointers, 
+lambda expressions, and move semantics used.
+We don't believe that we used any of the modern C++ features. We did plan on using smart 
+pointers but couldn't figure out how to use them with the ice so we gave up on them and 
+just used regular raw pointers. Didn't see a need to use lambda expressions or move semantics. 
+
+4. What coding standards did you adhere to? Provide details on how you chose variable name, 
+comments, and a general approach to your groups agreed coding style.
+We generally made sure to make our variable and function names as descriptive of what they do/are.
+Especially with ambiguous code, we made sure to comment to make intent clear.  Whenever we were 
+dereferencing a pointer, we also always made sure that it wasn't null.
+
+5. How did you divide up the project in the group? What were the responsibilities of each group
+member?
+We didn't really have a system to split the work. Towards the beginning, we pair programmed like in CS1,
+but once we figured out how to use git's branching, we worked simultaneously on different features. For
+the majority of the project we would be collaborating in some way or another when working on the project
+and very rarely would work on the project independently.
+
+6. Select a part or parts of code in the program that required your group to collaborate:
+
+int StudentWorld::move() {
+	if(protestorWaitTimeCounter % protestorWaitTime == 0 && numProtestor < maxNumProtestor)
+	{
+		createProtestor();
+		++numProtestor;
+	}
+	++protestorWaitTimeCounter;
+	
+	// If Ice man has lost all of his hit points, Iceman dies and the level
+	// restarts
+	if (player->getHitPoints() <= 0) {
+		decLives();
+		playSound(SOUND_PLAYER_ANNOYED);
+		return GWSTATUS_PLAYER_DIED;
+	}
+	player->doSomething();
+	updateScore();
+	
+	createSonarOrWater();
+	
+	for (unsigned int i = 0; i < gameActors.size(); ++i) {
+		if(gameActors[i] != nullptr)
+			gameActors[i]->doSomething();
+		//if gameactor is dead, delete and then set to nullptr
+		if(gameActors[i] != nullptr && gameActors[i]->isDead())
+		{
+			//decreases the amount of protestors on the board
+			if(gameActors[i]->isProtestor())
+			{
+				--numProtestor;
+			}
+			delete gameActors[i];
+			gameActors[i] = nullptr;
+		}
+	}
+	// If all oil Barells have been picked up, the level has been complete
+	if (oilNum - player->getBarrels() == 0) {
+		playSound(SOUND_FINISHED_LEVEL);
+		return GWSTATUS_FINISHED_LEVEL;
+	}
+
+	return GWSTATUS_CONTINUE_GAME;
+}
+
+a. Explain how the code fits into the overall program you wrote. Provide pseudo code, if necessary.
+This is our StudentWorld::move function.  It is how our program works
+
+if (random number genereator returns a right number)
+	call function that makes protestor (either hardcore or regular)
+if (iceman has no health){
+	play sound
+	decrease numLives
+	restart level
+}
+player doSomething
+updateScoreBoard
+for (i < ActorsVector) {
+	Actors doSomething
+	if (actor is dead)
+		remove actor
+}
+if (all oil is picked up)
+	move on to next level
+else
+	continue playing this level
+
+b. Discuss how this portion of code changed as the project progressed and any reasons that factored
+in.
+At first, we were using the student world functions to remove game actors, but when we got to the sonar,
+and other gameActors that are not in the game for too long, we realized that we needed to use the setDead
+suggestion in the packet.  It took a lot of tweaking to figure out how to delete the actors correctly.
+
+c. Display the code, either as text or a screenshot. Your answer should be no more than one page 
+of code.
+
+7. Discuss one or more significant runtime errors or bugs your group encountered while writing
+the program by answer the following questions.
+a. What was the error or bug?
+One of the problems that we both worked on was IceMan not walking through the boulders.
+
+b. What process did you use to discover it?
+We ran the code and he walked through the boulders.
+
+c. What modification did you make to the code to fix it?
+At first, he wouldn't detect the boulders, but after some function implementations, he would only walk through
+one of the boulders.  Once we used a radius check, he wouldn't walk through any of the boulders.
+
+8. What works in your program? What features are not implemented in your code? How did you test 
+on your code? What known issues are still present?
+Everything works except for the following:
+The shortest path for the hardcore protestor to iceman doesn't work at all.  The shortest path out of the map
+doesn't work perfectly. Protestors and water pools can clip ice just a little bit, and protestors don't follow 
+ice man all the time.
+We tested by running the program a lot, checking boundaries and such. We also printed stuff out to find hidden and
+not obvious bugs.

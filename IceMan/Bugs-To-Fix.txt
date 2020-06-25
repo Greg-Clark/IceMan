@@ -1,0 +1,9 @@
+0 Dropping gold for protestors to pick up as a bribe
+0 Go through code and find any function that are doing absolutely nothing
+0 Have water spurt be optimized when hits a protester
+0 update isMovingObjectThere for protestors
+0 update squirtRadius for protestors
+0 barrels of oil need to have visuals turned off
+0 implement findRadius function
+0 fix squirt at bounderies
+0 crashing as soon as iceman moves
