@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>CEBBE6DC-0DC6-4C43-A993-2E0FD6DF68E6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CEBBE6DC-0DC6-4C43-A993-2E0FD6DF68E6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>IceMan project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>IceMan</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run IceMan</string>
+			<key>timeStartedRecording</key>
+			<real>614809903.08903801</real>
+			<key>timeStoppedRecording</key>
+			<real>614809930.99712205</real>
+			<key>title</key>
+			<string>Run IceMan</string>
+			<key>uniqueIdentifier</key>
+			<string>CEBBE6DC-0DC6-4C43-A993-2E0FD6DF68E6</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

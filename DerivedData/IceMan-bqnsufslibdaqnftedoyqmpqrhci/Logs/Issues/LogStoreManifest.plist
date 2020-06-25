@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>3559391B-DEDD-44E6-A671-2158252FAFF4</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>3559391B-DEDD-44E6-A671-2158252FAFF4.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>IceMan-bqnsufslibdaqnftedoyqmpqrhci</string>
+			<key>timeStartedRecording</key>
+			<real>578874368.30904698</real>
+			<key>timeStoppedRecording</key>
+			<real>578874369.75803995</real>
+			<key>title</key>
+			<string>Build target IceMan</string>
+			<key>uniqueIdentifier</key>
+			<string>3559391B-DEDD-44E6-A671-2158252FAFF4</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>
